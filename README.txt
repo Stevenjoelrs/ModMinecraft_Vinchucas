@@ -26,6 +26,12 @@ If you prefer to use IntelliJ:
 3. Run the following command: `./gradlew genIntellijRuns`
 4. Refresh the Gradle Project in IDEA if required.
 
+If you prefer to use VsCode:
+1. Open VsCode and open a terminal with the project open.
+2. Run the following command: `./gradlew genVsCodeRuns`
+3. To build, use `./gradlew build`
+4. To run the client, use `./gradlew runClient`
+
 If at any point you are missing libraries in your IDE, or you've run into problems you can 
 run `gradlew --refresh-dependencies` to refresh the local cache. `gradlew clean` to reset everything 
 (this does not affect your code) and then start the process again.
