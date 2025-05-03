@@ -1,6 +1,9 @@
 package com.scesi.vinchucamod;
 
+import org.slf4j.Logger;
+
 import com.mojang.logging.LogUtils;
+
 import net.minecraft.client.Minecraft;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.world.food.FoodProperties;
@@ -26,11 +29,11 @@ import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
-import org.slf4j.Logger;
 
 // The value here should match an entry in the META-INF/mods.toml file
 @Mod(VinchucaMod.MODID)
 public class VinchucaMod {
+
     // Define mod id in a common place for everything to reference
     public static final String MODID = "vinchucamod";
     // Directly reference a slf4j logger
@@ -44,27 +47,27 @@ public class VinchucaMod {
 
     // Creates a new Block with the id "examplemod:example_block", combining the namespace and path
     public static final RegistryObject<Block> EXAMPLE_BLOCK = BLOCKS.register("example_block",
-        () -> new Block(BlockBehaviour.Properties.of()
-            .setId(BLOCKS.key("example_block"))
-            .mapColor(MapColor.STONE)
-        )
+            () -> new Block(BlockBehaviour.Properties.of()
+                    .setId(BLOCKS.key("example_block"))
+                    .mapColor(MapColor.STONE)
+            )
     );
     // Creates a new BlockItem with the id "examplemod:example_block", combining the namespace and path
     public static final RegistryObject<Item> EXAMPLE_BLOCK_ITEM = ITEMS.register("example_block",
-        () -> new BlockItem(EXAMPLE_BLOCK.get(), new Item.Properties().setId(ITEMS.key("example_block")))
+            () -> new BlockItem(EXAMPLE_BLOCK.get(), new Item.Properties().setId(ITEMS.key("example_block")))
     );
 
     // Creates a new food item with the id "examplemod:example_id", nutrition 1 and saturation 2
     public static final RegistryObject<Item> EXAMPLE_ITEM = ITEMS.register("example_item",
-        () -> new Item(new Item.Properties()
-            .setId(ITEMS.key("example_item"))
-            .food(new FoodProperties.Builder()
-                .alwaysEdible()
-                .nutrition(1)
-                .saturationModifier(2f)
-                .build()
+            () -> new Item(new Item.Properties()
+                    .setId(ITEMS.key("example_item"))
+                    .food(new FoodProperties.Builder()
+                            .alwaysEdible()
+                            .nutrition(1)
+                            .saturationModifier(2f)
+                            .build()
+                    )
             )
-        )
     );
 
     // Creates a creative tab with the id "examplemod:example_tab" for the example item, that is placed after the combat tab
@@ -102,8 +105,9 @@ public class VinchucaMod {
         // Some common setup code
         LOGGER.info("HELLO FROM COMMON SETUP");
 
-        if (Config.logDirtBlock)
+        if (Config.logDirtBlock) {
             LOGGER.info("DIRT BLOCK >> {}", ForgeRegistries.BLOCKS.getKey(Blocks.DIRT));
+        }
 
         LOGGER.info(Config.magicNumberIntroduction + Config.magicNumber);
 
@@ -112,8 +116,9 @@ public class VinchucaMod {
 
     // Add the example block item to the building blocks tab
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
-        if (event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS)
+        if (event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS) {
             event.accept(EXAMPLE_BLOCK_ITEM);
+        }
     }
 
     // You can use SubscribeEvent and let the Event Bus discover methods to call
@@ -126,6 +131,7 @@ public class VinchucaMod {
     // You can use EventBusSubscriber to automatically register all static methods in the class annotated with @SubscribeEvent
     @Mod.EventBusSubscriber(modid = MODID, bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
     public static class ClientModEvents {
+
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event) {
             // Some client setup code
