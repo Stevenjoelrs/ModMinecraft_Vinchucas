@@ -1,7 +1,6 @@
 package com.scesi.vinchucamod;
 
 import com.scesi.vinchucamod.effect.ChagasEffect;
-import com.scesi.vinchucamod.util.ModDamageTypes;
 
 import org.slf4j.Logger;
 
@@ -31,7 +30,6 @@ import net.minecraftforge.fml.config.ModConfig;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
-import net.minecraftforge.fml.loading.FMLEnvironment;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
@@ -87,18 +85,13 @@ public class VinchucaMod {
     public VinchucaMod() {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
         // Register the commonSetup method for modloading
-        modEventBus.addListener(this::commonSetup);
-
+        modEventBus.addListener(this::commonSetup);        
         // Register the Deferred Register to the mod event bus so blocks get registered
         BLOCKS.register(modEventBus);
         // Register the Deferred Register to the mod event bus so items get registered
         ITEMS.register(modEventBus);
         // Register the Deferred Register to the mod event bus so tabs get registered
         CREATIVE_MODE_TABS.register(modEventBus);
-
-        if (!FMLEnvironment.dist.isClient()) {
-            ModDamageTypes.DAMAGE_TYPES.register(modEventBus);
-        }
 
         MOB_EFFECTS.register(modEventBus);
         // Register ourselves for server and other game events we are interested in
