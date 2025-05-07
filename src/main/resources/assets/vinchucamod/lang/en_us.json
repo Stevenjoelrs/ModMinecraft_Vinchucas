@@ -1,3 +1,4 @@
 {
-    "item.vinchucamod.example_item": "Antidoto del chagas"
+    "item.vinchucamod.example_item": "Antidoto del chagas",
+    "effect.vinchucamod.chagas": "Mal de chagas"
 }
