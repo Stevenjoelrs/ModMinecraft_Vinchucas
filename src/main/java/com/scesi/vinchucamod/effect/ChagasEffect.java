@@ -25,6 +25,6 @@ public class ChagasEffect extends MobEffect {
     }
     @Override
     public boolean shouldApplyEffectTickThisTick(int duration, int amplifier) {
-        return duration % 10 == 0;
+        return duration % 40 == 0;
     }
 }
