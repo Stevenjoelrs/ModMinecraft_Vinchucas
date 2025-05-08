@@ -24,5 +24,5 @@ public class MobEntities {
             () -> EntityType.Builder.of(VinchucaEntity::new, MobCategory.MONSTER)
             .sized(0.5f, 0.5f)
             .build(ResourceKey.create(Registries.ENTITY_TYPE,
-            ResourceLocation.parse(VinchucaMod.MODID + ":vinchuca"))));
+            ResourceLocation.fromNamespaceAndPath(VinchucaMod.MODID, "vinchuca"))));
 }
