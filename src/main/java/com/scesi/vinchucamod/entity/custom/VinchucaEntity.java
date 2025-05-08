@@ -24,7 +24,8 @@ public class VinchucaEntity extends Monster{
         return Monster.createMonsterAttributes()
             .add(Attributes.MAX_HEALTH, 10.0)
             .add(Attributes.ATTACK_DAMAGE, 2.0)
-            .add(Attributes.MOVEMENT_SPEED, 0.3);
+            .add(Attributes.MOVEMENT_SPEED, 0.3)
+            .add(Attributes.SCALE, 0.3);
     }
 
     @Override

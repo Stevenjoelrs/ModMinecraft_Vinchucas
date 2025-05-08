@@ -22,7 +22,7 @@ public class MobEntities {
     public static final RegistryObject<EntityType<VinchucaEntity>> VINCHUCA = 
         ENTITY_TYPES.register("vinchuca",
             () -> EntityType.Builder.of(VinchucaEntity::new, MobCategory.MONSTER)
-            .sized(0.5f, 0.5f)
+            .sized(1f, 1f)
             .build(ResourceKey.create(Registries.ENTITY_TYPE,
             ResourceLocation.fromNamespaceAndPath(VinchucaMod.MODID, "vinchuca"))));
 }
