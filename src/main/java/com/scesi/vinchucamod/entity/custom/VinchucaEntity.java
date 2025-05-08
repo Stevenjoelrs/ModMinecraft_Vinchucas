@@ -16,7 +16,7 @@ import net.minecraft.world.level.Level;
  */
 public class VinchucaEntity extends Monster{
 
-    protected VinchucaEntity(EntityType<? extends Monster> entityType, Level level) {
+    public VinchucaEntity(EntityType<? extends Monster> entityType, Level level) {
         super(entityType, level);
     }
 
