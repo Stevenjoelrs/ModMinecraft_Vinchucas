@@ -1,6 +1,7 @@
 package com.scesi.vinchucamod;
 
 import com.scesi.vinchucamod.effect.ChagasEffect;
+import com.scesi.vinchucamod.entity.MobEntities;
 
 import org.slf4j.Logger;
 
@@ -92,6 +93,8 @@ public class VinchucaMod {
         ITEMS.register(modEventBus);
         // Register the Deferred Register to the mod event bus so tabs get registered
         CREATIVE_MODE_TABS.register(modEventBus);
+
+        MobEntities.ENTITY_TYPES.register(modEventBus);
 
         MOB_EFFECTS.register(modEventBus);
         // Register ourselves for server and other game events we are interested in
