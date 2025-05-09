@@ -62,9 +62,16 @@ Este mod introduce una nueva entidad hostil: la *vinchuca*. Inspirada en su cont
 
 ### Mal de Chagas
 <p align="center">
-  <img src=".github/assets/mal-de-chagas-minecraft.png" alt="Efecto Mal de Chagas" width="600">
+  <img src=".github/assets/imagenDeComando.png" alt="Comando de Mal de Chagas" width="600">
 </p>
 
+<p align="center">
+  <img src=".github/assets/efectoEnJugador.png" alt="Efecto Mal de Chagas en Jugador" width="600">
+</p>
+
+<p align="center">
+  <img src=".github/assets/mal-de-chagas-minecraft.png" alt="Efecto Mal de Chagas" width="600">
+</p>
 
 > De momento el efecto no tiene un icono asignado, pero sus efectos como generar 2 puntos de daño cada 20 ticks cuando se tiene <= 19 puntos de comida si funciona.
 
