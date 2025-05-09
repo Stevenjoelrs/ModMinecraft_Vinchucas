@@ -65,4 +65,21 @@ Este mod introduce una nueva entidad hostil: la *vinchuca*. Inspirada en su cont
   <img src=".github/assets/mal-de-chagas-minecraft.png" alt="Efecto Mal de Chagas" width="600">
 </p>
 
+
 > De momento el efecto no tiene un icono asignado, pero sus efectos como generar 2 puntos de daño cada 20 ticks cuando se tiene <= 19 puntos de comida si funciona.
+
+### Item de Curacion 
+<p align="center">
+  <img src=".github/assets/itemInventario.jpg" alt="El item aparece en el inventario." width="600">
+</p>
+
+
+> El item aparece correctamente en el inventario en la seccion `food & drinks.`
+
+<p align="center">
+  <img src=".github/assets/cosumirItem.png" alt="El item es consumible." width="600">
+</p>
+
+
+> El item `antidoto del chagas` es consumible.
+
