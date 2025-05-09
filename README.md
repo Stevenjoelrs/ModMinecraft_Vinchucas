@@ -72,3 +72,14 @@ Este mod introduce una nueva entidad hostil: la *vinchuca*. Inspirada en su cont
 <p align="center">
   <img src=".github/assets/itemInventario.jpg" alt="El item aparece en el inventario." width="600">
 </p>
+
+
+> El item aparece correctamente en el inventario en la seccion `food & drinks.`
+
+<p align="center">
+  <img src=".github/assets/cosumirItem.png" alt="El item es consumible." width="600">
+</p>
+
+
+> El item `antidoto del chagas` es consumible.
+
