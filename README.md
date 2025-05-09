@@ -94,3 +94,15 @@ Este mod introduce una nueva entidad hostil: la *vinchuca*. Inspirada en su cont
 
 > El item `antidoto del chagas` es consumible.
 
+# TO DO
+
+- [x] Mob funcional.
+- [x] Efecto funcional.
+- [x] Cura funcional.
+- [ ] Mob aplica efecto de chagas al golpear al jugador.
+- [ ] Mob Spawnea solo en bloques de adobe.
+- [ ] Crafteo funcional para el item de cura.
+- [ ] El efecto solo puede desaparecer con la cura del mod.
+- [ ] Texturas para el mob.
+- [ ] Texturas para el efecto.
+- [ ] Texturas para la poción de cura.
