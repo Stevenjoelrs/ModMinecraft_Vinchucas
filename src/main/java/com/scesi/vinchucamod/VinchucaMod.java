@@ -2,12 +2,15 @@ package com.scesi.vinchucamod;
 
 import com.scesi.vinchucamod.effect.ChagasEffect;
 import com.scesi.vinchucamod.item.ChagasCurePotionItem;
+import com.scesi.vinchucamod.entity.MobEntities;
+import com.scesi.vinchucamod.entity.client.VinchucaRenderer;
 
 import org.slf4j.Logger;
 
 import com.mojang.logging.LogUtils;
 
 import net.minecraft.client.Minecraft;
+import net.minecraft.client.renderer.entity.EntityRenderers;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.CreativeModeTab;
@@ -95,6 +98,8 @@ public class VinchucaMod {
         // Register the Deferred Register to the mod event bus so tabs get registered
         CREATIVE_MODE_TABS.register(modEventBus);
 
+        MobEntities.ENTITY_TYPES.register(modEventBus);
+
         MOB_EFFECTS.register(modEventBus);
         // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);
@@ -142,6 +147,7 @@ public class VinchucaMod {
             // Some client setup code
             LOGGER.info("HELLO FROM CLIENT SETUP");
             LOGGER.info("MINECRAFT NAME >> {}", Minecraft.getInstance().getUser().getName());
+            EntityRenderers.register(MobEntities.VINCHUCA.get(), VinchucaRenderer::new);
         }
     }
 }
