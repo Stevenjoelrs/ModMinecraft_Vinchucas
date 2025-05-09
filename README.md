@@ -65,9 +65,13 @@ Este mod introduce una nueva entidad hostil: la *vinchuca*. Inspirada en su cont
   <img src=".github/assets/imagenDeComando.png" alt="Comando de Mal de Chagas" width="600">
 </p>
 
+> Comando para asignar efecto al jugador.
+
 <p align="center">
   <img src=".github/assets/efectoEnJugador.png" alt="Efecto Mal de Chagas en Jugador" width="600">
 </p>
+
+> Efecto asignado al jugador.
 
 <p align="center">
   <img src=".github/assets/mal-de-chagas-minecraft.png" alt="Efecto Mal de Chagas" width="600">
