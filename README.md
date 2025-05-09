@@ -9,6 +9,8 @@ En desarrollo para Minecraft 1.21.5 - Forge
   <img src=".github/assets/vinchucas-vs-player.png" alt="Player atacado por vinchucas." width="600">
 </p>
 
+> El mob de vinchucas solo es hostil a jugadores, la imagen es solo referencial.
+
 ## Descripción
 
 Este mod introduce una nueva entidad hostil: la *vinchuca*. Inspirada en su contraparte real, implementando el mal de Chagas. 
@@ -62,3 +64,5 @@ Este mod introduce una nueva entidad hostil: la *vinchuca*. Inspirada en su cont
 <p align="center">
   <img src=".github/assets/mal-de-chagas-minecraft.png" alt="Efecto Mal de Chagas" width="600">
 </p>
+
+> De momento el efecto no tiene un icono asignado, pero sus efectos como generar 2 puntos de daño cada 20 ticks cuando se tiene <= 19 puntos de comida si funciona.
