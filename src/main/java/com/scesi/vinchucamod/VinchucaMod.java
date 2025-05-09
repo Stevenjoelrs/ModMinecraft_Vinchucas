@@ -1,6 +1,7 @@
 package com.scesi.vinchucamod;
 
 import com.scesi.vinchucamod.effect.ChagasEffect;
+import com.scesi.vinchucamod.item.ChagasCurePotionItem;
 import com.scesi.vinchucamod.entity.MobEntities;
 import com.scesi.vinchucamod.entity.client.VinchucaRenderer;
 
@@ -70,19 +71,20 @@ public class VinchucaMod {
     );
 
     // Creates a new potion item with the id "examplemod:example_id"
-    public static final RegistryObject<Item> EXAMPLE_ITEM = ITEMS.register("example_item",
-            () -> new PotionItem(new Item.Properties()
-                    .setId(ITEMS.key("example_item"))
+    public static final RegistryObject<Item> CHAGAS_CURE_POTION = ITEMS.register("chagas_cure_potion",
+            () -> new ChagasCurePotionItem(new Item.Properties()
+                    .setId(ITEMS.key("chagas_cure_potion"))
                     .stacksTo(1)
+                    .food(null)
             )
     );
 
     // Creates a creative tab with the id "examplemod:example_tab" for the example item, that is placed after the combat tab
     public static final RegistryObject<CreativeModeTab> EXAMPLE_TAB = CREATIVE_MODE_TABS.register("example_tab", () -> CreativeModeTab.builder()
             .withTabsBefore(CreativeModeTabs.COMBAT)
-            .icon(() -> EXAMPLE_ITEM.get().getDefaultInstance())
+            .icon(() -> CHAGAS_CURE_POTION.get().getDefaultInstance())
             .displayItems((parameters, output) -> {
-                output.accept(EXAMPLE_ITEM.get()); // Add the example item to the tab. For your own tabs, this method is preferred over the event
+                output.accept(CHAGAS_CURE_POTION.get()); // Add the example item to the tab. For your own tabs, this method is preferred over the event
             }).build());
 
     public VinchucaMod() {
@@ -124,8 +126,8 @@ public class VinchucaMod {
 
     // Add the example block item to the building blocks tab
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
-        if (event.getTabKey() == CreativeModeTabs.FOOD_AND_DRINKS) { // Cambiar a la pestaña de Brewing
-            event.accept(EXAMPLE_ITEM);
+        if (event.getTabKey() == CreativeModeTabs.FOOD_AND_DRINKS) { // Cambiar a la pestaÃ±a de Brewing
+            event.accept(CHAGAS_CURE_POTION);
         }
     }
 
